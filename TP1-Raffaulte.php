@@ -7,50 +7,49 @@
 </head>
 <body>
     <h1>POO</h1>
-<?php
-    class Empleado {
-        private $nombre;
-        private $sueldo;
+    <?php
+        class Empleado {
+            private $nombre;
+            private $sueldo;
 
-        public function __construct($nombre, $sueldo) {
-            $this->nombre = $nombre;
-            $this->sueldo = $sueldo;
+            public function __construct($nombre, $sueldo) {
+                $this->nombre = $nombre;
+                $this->sueldo = $sueldo;
+            }
+
+            public function Nombre() {
+                return $this->nombre;
+            }
+
+            public function Sueldo() {
+                return $this->sueldo;
+            }
+
+            public function calcular_Salario() {
+                $salarioNeto = $this->sueldo * 0.9;
+                return $salarioNeto;
+            }
         }
 
-        public function Nombre() {
-            return $this->nombre;
+        class Desarrollador extends Empleado {
+            public function calcular_Salario() {
+                return calcular_Salario();
+            }
         }
 
-        public function Sueldo() {
-            return $this->sueldo;
+        class Diseñador extends Empleado {
+            public function calcular_Salario() {
+                $salarioNeto = $this->Sueldo() * 0.85;
+                return $salarioNeto;
+            }
         }
 
-        public function calcular_Salario() {
-            $salarioNeto = $this->sueldo * 0.9;
-            return $salarioNeto;
-        }
-    }
+        $empleado1 = new Desarrollador("Adriano", 1500);
+        $empleado2 = new Diseñador("Valentin", 1500);
 
-    class Desarrollador extends Empleado {
-        public function calcular_Salario() {
-            return calcular_Salario();
-        }
-    }
+        echo "Empleado 1 - Nombre: " . $empleado1->Nombre() . ", Salario Neto: $" . $empleado1->calcular_Salario();
+        echo "Empleado 2 - Nombre: " . $empleado2->Nombre() . ", Salario Neto: $" . $empleado2->calcular_Salario();
 
-    class Diseñador extends Empleado {
-        public function calcular_Salario() {
-            $salarioNeto = $this->Sueldo() * 0.85;
-            return $salarioNeto;
-        }
-    }
-
-    $empleado1 = new Desarrollador("Adriano", 1500);
-    $empleado2 = new Diseñador("Valentin", 1500);
-
-    echo "Empleado 1 - Nombre: " . $empleado1->Nombre() . ", Salario Neto: $" . $empleado1->calcular_Salario();
-    echo "Empleado 2 - Nombre: " . $empleado2->Nombre() . ", Salario Neto: $" . $empleado2->calcular_Salario();
-
-?>
-
+    ?>
 </body>
 </html>
