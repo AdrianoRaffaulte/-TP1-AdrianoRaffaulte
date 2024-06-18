@@ -47,8 +47,8 @@
         $empleado1 = new Desarrollador("Adriano", 1500);
         $empleado2 = new Diseñador("Valentin", 1500);
 
-        echo "Empleado 1 - Nombre: " . $empleado1->Nombre() . ", Salario Neto: $" . $empleado1->calcular_Salario();
-        echo "Empleado 2 - Nombre: " . $empleado2->Nombre() . ", Salario Neto: $" . $empleado2->calcular_Salario();
+        echo "Empleado 1 - Nombre: " . $empleado1->Nombre() . ", Salario Neto: $" . $empleado1->calcular_Salario() . "<br>";
+        echo "Empleado 2 - Nombre: " . $empleado2->Nombre() . ", Salario Neto: $" . $empleado2->calcular_Salario() . "<br>";
 
     ?>
 </body>
