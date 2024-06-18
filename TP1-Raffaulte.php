@@ -9,8 +9,8 @@
     <h1>POO</h1>
 <?php
     class Empleado {
-        public $nombre;
-        public $sueldo;
+        private $nombre;
+        private $sueldo;
 
         public function __construct($nombre, $sueldo) {
             $this->nombre = $nombre;
