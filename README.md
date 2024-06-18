@@ -1,4 +1,5 @@
 Buenas profesor, disculpe que haya tenido que crear un nuevo repositorio
+
 La función de la aplicación es poder ver los empleados con sus respectiva enumeración,nombres y salario (con descuento)
 
 Para que así el programa realice un cálculo de su sueldo añadiéndole un porcentaje de descuento fijo del 10% a los empleados
