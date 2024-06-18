@@ -33,7 +33,7 @@
 
         class Desarrollador extends Empleado {
             public function calcular_Salario() {
-                return calcular_Salario();
+                return parent::calcular_Salario();
             }
         }
 
