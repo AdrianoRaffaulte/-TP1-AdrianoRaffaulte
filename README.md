@@ -6,6 +6,7 @@ Dependiendo de si se es desarrollador: el descuento es el mismo, si se es diseñ
 
 COMMITS:
 Desde el primer Commit al cuarto no me funcionaba el código e intenté esos cambios que publiqué
+
 En el quinto Commit entendí que la falla era que en el return de calcular salario debe llamar al método "calcular_Salario" mediante "return::parent"
 
 Raffaulte Adriano
