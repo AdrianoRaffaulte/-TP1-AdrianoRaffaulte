@@ -6,49 +6,26 @@
     <title>EJERCICIO 2 - PHP - Raffaulte</title>
 </head>
 <body>
-    <h1>POO</h1>
+    <h1>LISTA DE EMPLEADOS</h1>
     <?php
-        class Empleado {
-            private $nombre;
-            private $sueldo;
+    //SE INCLUYEN LOS NUEVOS ARCHIVOS
+    include 'IEmpleado.php';
+    include 'Empleado.php';
+    include 'Desarrollador.php';
+    include 'Diseñador.php';
 
-            public function __construct($nombre, $sueldo) {
-                $this->nombre = $nombre;
-                $this->sueldo = $sueldo;
-            }
+    //SE LLAMAN A LOS NUEVOS
+    $empleado1 = new Desarrollador("Carlos Lopez", 4800, "Java");
+    $empleado2 = new Diseñador("Ana Pérez", 3300, "Photoshop");
 
-            public function Nombre() {
-                return $this->nombre;
-            }
-
-            public function Sueldo() {
-                return $this->sueldo;
-            }
-
-            public function calcular_Salario() {
-                $salarioNeto = $this->sueldo * 0.9;
-                return $salarioNeto;
-            }
-        }
-
-        class Desarrollador extends Empleado {
-            public function calcular_Salario() {
-                return parent::calcular_Salario();
-            }
-        }
-
-        class Diseñador extends Empleado {
-            public function calcular_Salario() {
-                $salarioNeto = $this->Sueldo() * 0.85;
-                return $salarioNeto;
-            }
-        }
-
-        $empleado1 = new Desarrollador("Adriano", 1500);
-        $empleado2 = new Diseñador("Valentin", 1500);
-
-        echo "Empleado 1 - Nombre: " . $empleado1->Nombre() . ", Salario Neto: $" . $empleado1->calcular_Salario() . "<br>";
-        echo "Empleado 2 - Nombre: " . $empleado2->Nombre() . ", Salario Neto: $" . $empleado2->calcular_Salario() . "<br>";
+    //SE MODIFICA EL HTML
+    echo "<div>";
+    echo "<h2>Diseñador</h2>";
+    echo "Nombre: " . $empleado2->getNombre() . "<br>";
+    echo "Herramienta: " . $empleado2->getHerramienta() . "<br>";
+    echo "Tarea: " . $empleado2->tarea() . "<br>";
+    echo "Sueldo Bruto: $" . number_format($empleado2->getSueldo(), 2) . "<br>";
+    echo "Salario Neto: $" . number_format($empleado2->calcularSalarioNeto(), 2) . "<br>";
     ?>
 </body>
 </html>
