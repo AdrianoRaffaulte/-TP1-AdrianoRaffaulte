@@ -6,3 +6,4 @@ interface IEmpleado{
     //METODO CALCULAR SALARIO
     public function calcularSalarioNeto();
 }
+?>
