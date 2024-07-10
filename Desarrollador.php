@@ -14,5 +14,9 @@ class Desarrollador extends Empleado{
     public function calcularSalarioNeto(){
         return $this->sueldo * 0.9;
     }
+    // METODO LENGUAJE
+    public function getLenguaje(){
+        return $this->lenguaje;
+    }
 }
 ?>
