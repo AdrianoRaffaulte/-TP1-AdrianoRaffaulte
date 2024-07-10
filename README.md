@@ -1,12 +1,15 @@
 Raffaulte Adriano
 
 Trabajo Práctico N°2
+
 La función de la aplicación es mejorar la primera parte de ésta, implementando una interfaz para definir un contrato común para todas las clases de empleados
+
 COMMITS:
 Los primeros commits fueron basicamente crear los archivos necesarios para seguir con la actividad
+
 Al modificar el main con personalizacion en html surgieron los problemas de que no reconocía la clase "Lenguaje", esto fue porque no había declarado el public function en el archivo de desarrollador
-A pesar de eso seguia sin funcionar y vi que en el archivo Empleado había olvidado definir las propiedades de las variables
-y declarar los métodos abstractos de tarea() y calcularSalarioNeto()
+
+A pesar de eso seguia sin funcionar y vi que en el archivo Empleado había olvidado definir las propiedades de las variables y declarar los métodos abstractos de tarea() y calcularSalarioNeto()
 
 Luego de eso funcionó el programa correctamente
 
