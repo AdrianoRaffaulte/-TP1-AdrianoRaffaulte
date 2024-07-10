@@ -26,6 +26,15 @@
     echo "Tarea: " . $empleado2->tarea() . "<br>";
     echo "Sueldo Bruto: $" . number_format($empleado2->getSueldo(), 2) . "<br>";
     echo "Salario Neto: $" . number_format($empleado2->calcularSalarioNeto(), 2) . "<br>";
+
+    echo "<div>";
+    echo "<h2>Desarrollador</h2>";
+    echo "Nombre: " . $empleado1->getNombre() . "<br>";
+    echo "Lenguaje: " . $empleado1->getLenguaje() . "<br>";
+    echo "Tarea: " . $empleado1->tarea() . "<br>";
+    echo "Sueldo Bruto: $" . number_format($empleado1->getSueldo(), 2) . "<br>";
+    echo "Salario Neto: $" . number_format($empleado1->calcularSalarioNeto(), 2) . "<br>";
+    echo "<div>";
     ?>
 </body>
 </html>
